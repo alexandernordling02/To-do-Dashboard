@@ -37,6 +37,14 @@ function App() {
             {selectedPerson && (
                 <h2>{selectedPerson.name}</h2>
             )}
+
+            {selectedPerson && (
+                <ul>
+                    {selectedPerson.todos.map((todo) => (
+                        <li key={todo}>{todo}</li>
+                    ))}
+                </ul>
+            )}
         </>
     )
 }

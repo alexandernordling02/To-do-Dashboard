@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import PersonList from './components/PersonList'
+import TodoList from './components/TodoList'
 
 const people =
     [{
@@ -39,11 +40,7 @@ function App() {
             )}
 
             {selectedPerson && (
-                <ul>
-                    {selectedPerson.todos.map((todo) => (
-                        <li key={todo}>{todo}</li>
-                    ))}
-                </ul>
+                <TodoList todos={selectedPerson.todos} />
             )}
         </>
     )

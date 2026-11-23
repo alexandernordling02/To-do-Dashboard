@@ -1,7 +1,7 @@
 function Person({ person, setSelectedPerson }) {
     return (
         <>
-            <button onClick={() => {
+            <button className="person-button" onClick={() => {
                 setSelectedPerson(person)
             }}>
                 {person.name}

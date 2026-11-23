@@ -2,7 +2,7 @@ function TodoList({ todos }) {
 
     return (
         <>
-            <ul>
+            <ul className="todo-list">
                 {todos.map((todo) => (
                     <li key={todo}>{todo}</li>
                 ))}

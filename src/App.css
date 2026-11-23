@@ -39,3 +39,87 @@ body {
     background-color: #2a2a2a;
     border-color: #1db954;
 }
+
+
+.todo-list {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+}
+
+.todo-item {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-left: 4px solid #1db954;
+    padding: 16px 20px;
+    border-radius: 8px;
+    color: #e5e5e5;
+    transition: 0.2s ease;
+}
+
+.todo-item:hover {
+    background-color: #292929;
+    transform: translateX(4px);
+}
+
+
+.selected-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1db954;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+
+.dashboard-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.dashboard-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #1db954;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+
+.person-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+
+.person-button.active {
+    background-color: #1db954;
+    color: #121212;
+    border-color: #1db954;
+    font-weight: bold;
+}
+
+.person-button.active:hover {
+    background-color: #19a34a;
+    border-color: #19a34a;
+}
+
+.todo-container {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 25px;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}

@@ -33,14 +33,19 @@ function App() {
 
     return (
         <>
-            <PersonList people={people} setSelectedPerson={setSelectedPerson} />
+            <h1 className="dashboard-title">Todo Dashboard</h1>
+            <PersonList people={people} setSelectedPerson={setSelectedPerson} selectedPerson={selectedPerson} />
 
             {selectedPerson && (
-                <h2>{selectedPerson.name}</h2>
-            )}
-
-            {selectedPerson && (
-                <TodoList todos={selectedPerson.todos} />
+                <div className="todo-container">
+                    <div className="todo-header">
+                        <h2 className="selected-name">{selectedPerson.name}</h2>
+                        <span className="todo-count">
+                            {selectedPerson.todos.length} uppgifter
+                        </span>
+                    </div>
+                    <TodoList todos={selectedPerson.todos} />
+                </div>
             )}
         </>
     )
